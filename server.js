@@ -8,6 +8,7 @@ const transactionRouter = require("./routes/transactionRouter");
 const port = process.env.PORT || 5000
 app.use(cors({
     // origin: 'http://localhost:3000',
+    origin: "https://nixty-bank.vercel.app",
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     allowedHeaders: ['Authorization', 'Content-Type'],
 }));
