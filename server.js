@@ -2,11 +2,9 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
-const cron = require("node-cron");
 const app = express();
 const authRouter = require("./routes/authRouter");
 const transactionRouter = require("./routes/transactionRouter");
-const calculateInterest = require('./interestCalculator');
 const port = process.env.PORT || 5000
 app.use(cors({
     // origin: 'http://localhost:3000',
@@ -24,12 +22,6 @@ app.use(express.json());
         console.log(error)
     }
 })();
-
-//for calculating interest
-cron.schedule('* * * * *', () => {
-    console.log('Calculating interest...');
-    calculateInterest().catch(err => console.error(err));
-});
 
 app.use("/auth", authRouter);
 app.use("/transaction", transactionRouter)
