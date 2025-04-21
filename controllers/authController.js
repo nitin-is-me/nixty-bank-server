@@ -13,13 +13,13 @@ const sendOtpEmail = async (email, otp) => {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: "nitinjha2609@gmail.com",
+            user: "bloodyrookie123@gmail.com",
             pass: process.env.PASS,
         },
     });
 
     const mailOptions = {
-        from: "nitinjha2609@gmail.com",
+        from: "bloodyrookie123@gmail.com",
         to: email,
         subject: 'Nixty Bank Verification',
         text: `Your OTP code is: ${otp}`,
