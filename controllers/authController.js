@@ -21,7 +21,7 @@ const sendOtpEmail = async (email, otp) => {
     const mailOptions = {
         from: "nitinjha2609@gmail.com",
         to: email,
-        subject: 'Your OTP Code',
+        subject: 'Nixty Bank Verification',
         text: `Your OTP code is: ${otp}`,
     };
 
