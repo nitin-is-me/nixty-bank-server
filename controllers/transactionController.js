@@ -66,14 +66,14 @@ exports.pay = async (req, res) => {
     const mailOptions1 = {
       from: "nitinjha2609@gmail.com",
       to: receiverAccount.email,
-      subject: 'Transaction Details',
+      subject: "Your Transaction Details",
       text: `Your account X${receiverShortAccountNumber} has been credited with $${amount} from ${senderAccount.name}.`,
     };
 
     const mailOptions2 = {
       from: "nitinjha2609@gmail.com",
       to: senderAccount.email,
-      subject: 'Transaction Details',
+      subject: "Your Transaction Details",
       text: `Your account X${senderShortAccountNumber} has been debited with $${amount} to ${receiverAccount.name}.`,
     };
 
