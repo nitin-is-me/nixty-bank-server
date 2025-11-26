@@ -11,6 +11,7 @@ app.use(cors({
     origin: "https://nixty-bank.vercel.app",
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     allowedHeaders: ['Authorization', 'Content-Type'],
+    credentials: true
 }));
 app.use(cookieParser());
 app.use(express.json());
